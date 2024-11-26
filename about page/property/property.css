@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* =============== */
+  /* header section */
+  /* =============== */
+  
+  header {
+    /* border: 1px solid; */
+    padding: 30px;
+    background:gainsboro;
+    /* color: #fff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* position: fixed;
+    width: 100vw;
+    z-index: 0;
+    margin-top: -30px; */
+  }
+  
+  #menuIcon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    background: #727272;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar .navbar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-list .navbar-item {
+    list-style: none;
+    margin: 10px 0;
+  }
+  
+  .navbar-list .navbar-item::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    background: green;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+  }
+  
+  .navbar-list .navbar-item:hover::after {
+    width: 100%;
+  }
+  .navbar-item a:hover{
+    color: green;
+  }
+  .navbar-list .navbar-item.active {
+    border-bottom: 2px solid green;
+  }
+  
+  .navbar-item .navbar-link {
+    /* color: #fff; */
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+  }
+
+  .btn:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  #closeIcon {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 20px;
+    transition: 0.5s ease;
+  }
+  
+  #closeIcon:hover {
+    color: red;
+    cursor: pointer;
+  }
+
+  /* property section */
+      .property_images{
+       display: flex;
+       justify-content: center;
+       gap: 40px;
+      }
+      .property_img1{
+        width: 25vw;
+        margin-top:40px;
+      } 
+      .property_img2{
+        width: 25vw;
+        margin-top: 40px;
+      }
+      .property_img3{
+        width: 25vw;
+        margin-top: 40px;
+      }
+      .about{
+        background-color: gainsboro;
+        padding: 20px;
+        margin-top: 20px;
+       
+      }
+      .home{
+        text-decoration: none;
+        list-style-type: none;
+        color: green;
+      }
+      .house_desc{
+        display: flex;
+        justify-content: space-around;
+        gap: 8px;
+        
+      }
+      .rent_btn{
+        padding:5px 26px;
+        border: 1px solid green;
+        border-radius: 15px;
+        margin-left: 10px;
+      }
+      .rent_btn:hover{
+        background-color:#2eca6a;
+        /* opacity: 50%; */
+        transition: 3s;
+        color: #fff;
+      }
+      .house_info{
+        /* border: 1px solid green; */
+        background-color:#2eca6a;
+        opacity: 30%;
+        padding-bottom: -5px;
+        color: aliceblue;
+        position: relative;
+        top: -110px;
+
+        
+      }
+
+      /* footer */
+      footer{
+        background-color: rgba(220, 220, 220, 0.47);
+        padding: 50px;
+      }
+     .footer{
+      
+      display: flex;
+      justify-content: space-evenly;
+     }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        gap:12px;
+        }
+      .icons p{
+            border: 1px solid  whitesmoke;
+            border-radius: 50%;
+            padding: 10px;
+      }
+      .icons p:hover{
+        background-color: green;
+        transition: 3s;
+        color: #ffffff;
+      }
+      .copyright{
+        text-align: center;
+        margin-top: 23px;
+      }
+/* footer end
+ */
+
+
+
+
+
+
+
+  
+  @media (min-width: 768px) {
+    .navbar {
+      position: relative;
+      top: 0;
+      background: transparent;
+      height: inherit;
+      flex-direction: row;
+      justify-content: right;
+    }
+    #menuIcon,
+    #closeIcon {
+      display: none;
+    }
+    .navbar .navbar-list {
+      flex-direction: row;
+    }
+    .navbar-list .navbar-item {
+      margin: 0 10px;
+    }
+    .nav-btn {
+      margin-left:10px;
+    }
+}
+
+
+@media(max-width:768px){
+  .property_images{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .property_img1{
+    width: 100vw;
+  }
+  .property_img2{
+    width: 100vw;
+  }
+  .property_img3{
+    width: 100vw;
+  }
+}
+@media(max-width:880px){
+      .property_images{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .property_img1{
+        width: 100vw;
+      }
+      .property_img2{
+        width: 100vw;
+      }
+      .property_img3{
+        width: 100vw;
+      }
+      .footer{
+        display: flex;
+        flex-wrap: wrap;
+      }
+}
